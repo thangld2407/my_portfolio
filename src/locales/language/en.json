@@ -1,0 +1,10 @@
+{
+	"HEADER": {
+		"NAVBAR": {
+			"HOME": "HOME",
+			"ABOUT": "About Me",
+			"PROJECT": "project",
+			"MY_CV": "My Cv"
+		}
+	}
+}

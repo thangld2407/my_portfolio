@@ -1,0 +1,25 @@
+.header {
+  background: #ececec !important;
+  height: 8rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  &-dark {
+    background: #0a2647 !important;
+  }
+
+  &__logo {
+    height: 15rem;
+    width: 15rem;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-inline: 2rem !important;
+  }
+}
