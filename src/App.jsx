@@ -15,12 +15,15 @@ const RenderLoading = ({ onRendered }) => {
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
-
+  let timer;
   useEffect(() => {
     setIsLoading(true);
-    setTimeout(() => {
+    timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 2000);
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
   return (
     <Provider store={store}>

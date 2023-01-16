@@ -1,10 +1,10 @@
 import { Layout } from "antd";
 import logo from "@/assets/images/logo.png";
 import logoDark from "@/assets/images/logo_dark.png";
-import Menu from "../Menu/menu";
+import Menu from "../Menu/Nav";
 import { ROUTER } from "../../../constant/router";
 import { useEffect, useState } from "react";
-import MenuMobile from "../Menu/MenuMobile";
+import MenuMobile from "../Menu/NavMobile";
 import { useSelector } from "react-redux";
 const HeaderComponent = () => {
   const { Header } = Layout;
@@ -12,7 +12,7 @@ const HeaderComponent = () => {
   const { isDarkMode } = useSelector((state) => state.mode);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 992) {
         setNavMb(true);
       } else {
         setNavMb(false);
@@ -24,7 +24,7 @@ const HeaderComponent = () => {
   }, [navMb]);
 
   return (
-    <Header className={`header ${isDarkMode ? "header-dark" : ""}`}>
+    <Header className={`header  ${isDarkMode ? "header-dark" : ""}`}>
       <div className="header__logo">
         <img src={isDarkMode ? logoDark : logo} alt="logo" />
       </div>
