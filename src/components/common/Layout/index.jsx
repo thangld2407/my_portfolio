@@ -21,36 +21,45 @@ const LayoutComponent = () => {
   return (
     <Layout>
       <HeaderComponent />
-      <section
-        id="home"
+      <main
         style={{
-          height: "1400px",
-          background: "transparent",
+          margin: "0 5rem",
         }}
-      ></section>
-      <section
-        id="about"
-        style={{
-          height: "700px",
-          background: "purple",
-        }}
-      ></section>
+      >
+        <section
+          id="home"
+          style={{
+            height: "calc(1440px - 120px)",
+            background: "transparent",
+            marginTop: "8rem",
+          }}
+        >
+          <div className="home-content"></div>
+        </section>
+        <section
+          id="about"
+          style={{
+            height: "700px",
+            background: "purple",
+          }}
+        ></section>
 
-      <section
-        id="project"
-        style={{
-          height: "700px",
-          background: "#FEC868",
-        }}
-      ></section>
+        <section
+          id="project"
+          style={{
+            height: "700px",
+            background: "#FEC868",
+          }}
+        ></section>
 
-      <section
-        id="cv"
-        style={{
-          height: "700px",
-          background: "#ABC270",
-        }}
-      ></section>
+        <section
+          id="cv"
+          style={{
+            height: "700px",
+            background: "#ABC270",
+          }}
+        ></section>
+      </main>
 
       {visible && (
         <div className="scroll-top" onClick={handleScrollTop}>

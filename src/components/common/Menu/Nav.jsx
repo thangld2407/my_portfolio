@@ -57,9 +57,9 @@ const Menu = ({ items }) => {
       <div className="menu-item">
         <div className="menu-item__mode" onClick={handleChangeMode}>
           {mode ? (
-            <i class="fa-thin fa-clouds-sun"></i>
+            <i className="fa-thin fa-clouds-sun"></i>
           ) : (
-            <i class="fa-solid fa-moon"></i>
+            <i className="fa-solid fa-moon"></i>
           )}
         </div>
       </div>
